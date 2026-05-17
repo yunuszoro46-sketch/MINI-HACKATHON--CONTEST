@@ -13,7 +13,7 @@ export function SmartInsights({ products }: SmartInsightsProps) {
   }
 
   return (
-    <div className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border/50">
+    <div className="rounded-2xl bg-card p-6 ring-1 ring-border/50">
       <h2 className="mb-4 text-lg font-semibold text-foreground">Smart Insights</h2>
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="group flex items-start gap-3 rounded-xl bg-success/5 p-4 ring-1 ring-success/20 transition-all hover:ring-success/40">
@@ -31,14 +31,14 @@ export function SmartInsights({ products }: SmartInsightsProps) {
           </div>
         </div>
 
-        <div className="group flex items-start gap-3 rounded-xl bg-primary/5 p-4 ring-1 ring-primary/20 transition-all hover:ring-primary/40">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-            <Trophy className="h-5 w-5 text-primary" />
+        <div className="group flex items-start gap-3 rounded-xl bg-purple-500/5 p-4 ring-1 ring-purple-500/20 transition-all hover:ring-purple-500/40">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-500/10">
+            <Trophy className="h-5 w-5 text-purple-400" />
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-primary">Highest Rated</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-purple-400">Highest Rated</p>
             <p className="mt-1 text-lg font-bold text-foreground">
-              {insights.highestRated.rating}★
+              {insights.highestRated.rating}
             </p>
             <p className="mt-0.5 text-xs text-muted-foreground">
               {insights.highestRated.reviewCount.toLocaleString()} reviews
@@ -46,12 +46,12 @@ export function SmartInsights({ products }: SmartInsightsProps) {
           </div>
         </div>
 
-        <div className="group flex items-start gap-3 rounded-xl bg-foreground/5 p-4 ring-1 ring-foreground/10 transition-all hover:ring-foreground/20">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-foreground/10">
-            <Zap className="h-5 w-5 text-foreground" />
+        <div className="group flex items-start gap-3 rounded-xl bg-blue-500/5 p-4 ring-1 ring-blue-500/20 transition-all hover:ring-blue-500/40">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10">
+            <Zap className="h-5 w-5 text-blue-400" />
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Fastest Delivery</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-blue-400">Fastest Delivery</p>
             <p className="mt-1 text-lg font-bold text-foreground">
               {insights.fastestDelivery.delivery}
             </p>

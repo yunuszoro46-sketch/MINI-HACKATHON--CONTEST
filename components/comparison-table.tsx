@@ -18,7 +18,7 @@ export function ComparisonTable({ products, onRemove }: ComparisonTableProps) {
   const cheapestId = insights?.cheapest.id
 
   return (
-    <div className="rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border/50">
+    <div className="rounded-2xl bg-card p-6 ring-1 ring-border/50">
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h2 className="text-xl font-semibold text-foreground">Compare Products</h2>
@@ -32,11 +32,11 @@ export function ComparisonTable({ products, onRemove }: ComparisonTableProps) {
               <TrendingDown className="h-3.5 w-3.5" />
               Cheapest: ${insights.cheapest.price.toFixed(2)}
             </div>
-            <div className="hidden items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary sm:flex">
+            <div className="hidden items-center gap-1.5 rounded-full bg-purple-500/10 px-3 py-1.5 text-xs font-medium text-purple-400 sm:flex">
               <Trophy className="h-3.5 w-3.5" />
-              Top Rated: {insights.highestRated.rating}★
+              Top Rated: {insights.highestRated.rating}
             </div>
-            <div className="hidden items-center gap-1.5 rounded-full bg-foreground/10 px-3 py-1.5 text-xs font-medium text-foreground md:flex">
+            <div className="hidden items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1.5 text-xs font-medium text-blue-400 md:flex">
               <Zap className="h-3.5 w-3.5" />
               Fastest: {insights.fastestDelivery.delivery}
             </div>

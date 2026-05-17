@@ -17,13 +17,13 @@ export function ProductCard({ product, isInComparison, onCompareToggle, badge }:
     : null
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm ring-1 ring-border/50 transition-all duration-300 hover:shadow-xl hover:shadow-foreground/5 hover:ring-primary/20">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-border/50 transition-all duration-300 hover:ring-purple-500/30">
       {badge && (
         <div className={`
           absolute left-3 top-3 z-10 rounded-full px-2.5 py-1 text-xs font-medium
           ${badge === 'cheapest' ? 'bg-success text-success-foreground' : ''}
-          ${badge === 'highest-rated' ? 'bg-primary text-primary-foreground' : ''}
-          ${badge === 'fastest' ? 'bg-foreground text-background' : ''}
+          ${badge === 'highest-rated' ? 'gradient-bg text-white' : ''}
+          ${badge === 'fastest' ? 'bg-blue-500 text-white' : ''}
         `}>
           {badge === 'cheapest' && 'Best Deal'}
           {badge === 'highest-rated' && 'Top Rated'}
@@ -32,7 +32,7 @@ export function ProductCard({ product, isInComparison, onCompareToggle, badge }:
       )}
       
       {discount && !badge && (
-        <div className="absolute left-3 top-3 z-10 rounded-full bg-destructive/10 px-2.5 py-1 text-xs font-medium text-destructive">
+        <div className="absolute left-3 top-3 z-10 rounded-full bg-purple-500/20 px-2.5 py-1 text-xs font-medium text-purple-400">
           -{discount}%
         </div>
       )}
@@ -107,8 +107,8 @@ export function ProductCard({ product, isInComparison, onCompareToggle, badge }:
               className={`
                 flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all
                 ${isInComparison 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground'
+                  ? 'gradient-bg text-white' 
+                  : 'bg-secondary text-secondary-foreground hover:bg-purple-500/20 hover:text-purple-400'
                 }
               `}
             >

@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Find It Once - Search Once. Compare Everywhere.',
+  title: 'Shop Fusion - Search Once. Shop Everywhere.',
   description: 'Find the best prices across multiple stores instantly. Compare products from Amazon, eBay, Walmart, Alibaba, and Daraz in one place.',
 }
 

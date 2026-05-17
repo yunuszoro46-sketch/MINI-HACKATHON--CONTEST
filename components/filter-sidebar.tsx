@@ -44,13 +44,13 @@ export function FilterSidebar({
   const hasActiveFilters = priceRange[0] > 0 || priceRange[1] < 1000 || selectedStores.length > 0 || minRating > 0
 
   return (
-    <aside className="w-full rounded-2xl bg-card p-5 shadow-sm ring-1 ring-border/50 lg:w-64">
+    <aside className="w-full rounded-2xl bg-card p-5 ring-1 ring-border/50 lg:w-64">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-foreground">Filters</h2>
         {hasActiveFilters && (
           <button
             onClick={onClearFilters}
-            className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-purple-400"
           >
             <X className="h-3 w-3" />
             Clear all
@@ -80,7 +80,7 @@ export function FilterSidebar({
                   type="number"
                   value={priceRange[0]}
                   onChange={(e) => onPriceRangeChange([Number(e.target.value), priceRange[1]])}
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                   placeholder="$0"
                 />
               </div>
@@ -91,7 +91,7 @@ export function FilterSidebar({
                   type="number"
                   value={priceRange[1]}
                   onChange={(e) => onPriceRangeChange([priceRange[0], Number(e.target.value)])}
-                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+                  className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                   placeholder="$1000"
                 />
               </div>
@@ -124,7 +124,7 @@ export function FilterSidebar({
                   type="checkbox"
                   checked={selectedStores.includes(store.name)}
                   onChange={() => handleStoreToggle(store.name)}
-                  className="h-4 w-4 rounded border-input text-primary focus:ring-primary"
+                  className="h-4 w-4 rounded border-input text-purple-500 focus:ring-purple-500"
                 />
                 <span className="text-sm text-foreground">{store.name}</span>
               </label>
@@ -158,7 +158,7 @@ export function FilterSidebar({
                   name="rating"
                   checked={minRating === rating}
                   onChange={() => onMinRatingChange(rating)}
-                  className="h-4 w-4 border-input text-primary focus:ring-primary"
+                  className="h-4 w-4 border-input text-purple-500 focus:ring-purple-500"
                 />
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (

@@ -92,7 +92,7 @@ function SearchContent() {
       <Navbar />
 
       {/* Search Header */}
-      <div className="border-b border-border/50 bg-card/50">
+      <div className="border-b border-border/50 bg-card/30">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl">
             <SearchBar defaultValue={query} />
@@ -144,7 +144,7 @@ function SearchContent() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/80 lg:hidden"
+                  className="rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-purple-500/20 hover:text-purple-400 lg:hidden"
                 >
                   {showFilters ? 'Hide Filters' : 'Show Filters'}
                 </button>
@@ -178,7 +178,7 @@ function SearchContent() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as SortOption)}
-                    className="appearance-none rounded-lg border border-input bg-card py-2 pl-4 pr-10 text-sm font-medium text-foreground outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary"
+                    className="appearance-none rounded-lg border border-input bg-card py-2 pl-4 pr-10 text-sm font-medium text-foreground outline-none transition-colors focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                   >
                     <option value="best-match">Best Match</option>
                     <option value="lowest-price">Lowest Price</option>
@@ -216,7 +216,7 @@ function SearchContent() {
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="mt-4 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                  className="mt-4 rounded-lg gradient-bg px-4 py-2 text-sm font-medium text-white transition-colors hover:opacity-90"
                 >
                   Clear Filters
                 </button>
@@ -225,9 +225,9 @@ function SearchContent() {
 
             {/* Comparison hint */}
             {comparisonList.length > 0 && comparisonList.length < 4 && (
-              <div className="mt-8 rounded-xl bg-primary/5 p-4 text-center ring-1 ring-primary/20">
+              <div className="mt-8 rounded-xl bg-purple-500/5 p-4 text-center ring-1 ring-purple-500/20">
                 <p className="text-sm text-foreground">
-                  <span className="font-medium">{comparisonList.length}/4</span> products selected for comparison.
+                  <span className="font-medium text-purple-400">{comparisonList.length}/4</span> products selected for comparison.
                   {comparisonList.length < 2 && ' Add at least 2 products to compare.'}
                 </p>
               </div>
@@ -242,7 +242,7 @@ function SearchContent() {
 export default function SearchPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="animate-pulse text-muted-foreground">Loading...</div>
       </div>
     }>
