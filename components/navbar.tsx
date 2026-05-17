@@ -85,12 +85,49 @@ export function Navbar() {
 
           {/* Right side actions */}
           <div className="flex items-center gap-4">
-            <Link
-              href="/search"
-              className="hidden rounded-full border border-white/10 p-2.5 text-muted-foreground transition-all hover:border-purple-500/50 hover:text-foreground hover:shadow-lg hover:shadow-purple-500/20 sm:flex"
-            >
-              <Search className="h-5 w-5" />
-            </Link>
+            {/* Search with product dropdown */}
+            <div className="group relative hidden sm:block">
+              <button
+                className="flex rounded-full border border-white/10 p-2.5 text-muted-foreground transition-all hover:border-purple-500/50 hover:text-foreground hover:shadow-lg hover:shadow-purple-500/20"
+              >
+                <Search className="h-5 w-5" />
+              </button>
+              
+              {/* Dropdown on hover */}
+              <div className="invisible absolute right-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <div className="w-64 rounded-xl border border-white/10 bg-card p-4 shadow-xl shadow-black/20">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Popular Categories</p>
+                  <div className="flex flex-col gap-1">
+                    {[
+                      { name: 'Electronics', icon: '📱' },
+                      { name: 'Fashion', icon: '👕' },
+                      { name: 'Home & Garden', icon: '🏠' },
+                      { name: 'Sports', icon: '⚽' },
+                      { name: 'Beauty', icon: '💄' },
+                      { name: 'Toys & Games', icon: '🎮' },
+                    ].map((category) => (
+                      <Link
+                        key={category.name}
+                        href={`/search?category=${category.name.toLowerCase()}`}
+                        className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-white/5"
+                      >
+                        <span className="text-lg">{category.icon}</span>
+                        <span>{category.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-3 border-t border-white/10 pt-3">
+                    <Link
+                      href="/search"
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-white/5 px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
+                    >
+                      <Search className="h-4 w-4" />
+                      Browse All Products
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <Link 
               href="/search"
