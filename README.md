@@ -1,35 +1,39 @@
-# v0-ecommerce-product-search
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+# E-Commerce Product Search
 
-## Built with v0
+An AI-powered e-commerce product search and discovery application built during a hackathon. The platform delivers fast, intelligent, and flexible product filtering to help users seamlessly find what they are looking for.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+[**Live Demo**](https://v0-ecommerce-product-search-flame-gamma.vercel.app)
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_na8nkG3fXKR1i6ChglvTHWfIApAx)
+---
+
+## Features
+
+* **Intelligent Product Search:** Query products using natural language and key attributes.
+* **Dynamic Filtering:** Filter product catalogs by categories, price ranges, and technical specifications.
+* **Modern UI/UX:** Clean, responsive interface built with modern web components and optimized layout transitions.
+* **Fast Performance:** Server-side rendering and client-side state optimization for minimal latency.
+
+---
+
+## Tech Stack
+
+* **Frontend Framework:** Next.js / React
+* **Styling:** Tailwind CSS, shadcn/ui
+* **Deployment:** Vercel
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* Node.js (v18.0.0 or higher)
+* npm, pnpm, or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
-
-<a href="https://v0.app/chat/api/kiro/clone/yunuszoro46-sketch/v0-ecommerce-product-search" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   cd your-repo-name
