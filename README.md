@@ -10,7 +10,7 @@ An AI-powered e-commerce product search and discovery application built during a
 ## Features
 
 * **Intelligent Product Search:** Query products using natural language and key attributes.
-* **Dynamic Filtering:** Filter product catalogs by categories, price ranges, and technical specifications.
+* **Dynamic Filtering:** Filter product catalogs by categories, price ranges, and technical specifications
 * **Modern UI/UX:** Clean, responsive interface built with modern web components and optimized layout transitions.
 * **Fast Performance:** Server-side rendering and client-side state optimization for minimal latency.
 
