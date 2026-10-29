@@ -5,7 +5,7 @@ An AI-powered e-commerce product search and discovery application built during a
 
 [**Live Demo**](https://v0-ecommerce-product-search-flame-gamma.vercel.app)
 
----
+
 
 
 
