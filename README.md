@@ -3,7 +3,7 @@
 
 An AI-powered e-commerce product search and discovery application built during a hackathon. The platform delivers fast, intelligent, and flexible product filtering to help users seamlessly find what they are looking for.
 
-[**Live Demo**](https://v0-ecommerce-product-search-flame-gamma.vercel.app)
+[**Live Demo**](https://v0-ecommerce-product-search-flame-gamma.vercel.app
 
 
 
